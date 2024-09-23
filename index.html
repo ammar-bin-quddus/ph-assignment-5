@@ -41,74 +41,90 @@
             </div>
         </nav>
         <div class="w-full backdrop-blur-[8px] flex justify-center gap-10 h-[100px] items-center">
-            <button onclick="handleDonateBtn()" class="border-2 px-6 py-2 rounded-md hover:bg-[#00D7C0] hover:text-white">Donate</button>
-            <button onclick="handleHistoryBtn()" class="border-2 px-6 py-2 rounded-md hover:bg-[#00D7C0] hover:text-white">History</button>
+            <button onclick="handleDonateBtn()"
+                class="border-2 px-6 py-2 rounded-md hover:bg-[#00D7C0] hover:text-white">Donate</button>
+            <button onclick="handleHistoryBtn()"
+                class="border-2 px-6 py-2 rounded-md hover:bg-[#00D7C0] hover:text-white">History</button>
         </div>
     </header>
 
     <main class="w-full flex flex-col justify-center gap-10">
         <!-- donation card -->
-        <div class="flex flex-col md:flex-row w-[90%] mx-auto gap-5">
-            <div class="md:w-1/2">
-                <img src="./assets/noakhali.png" alt="feni">
-            </div>
-            <div class="md:w-1/2 flex flex-col justify-between gap-3">
-                <div class="w-32 flex items-center gap-2 bg-slate-200 px-3 py-2 rounded-md">
-                    <img width="20" height="20" src="./assets/coin.png" alt="coin">
-                    <p><span id="netDonateAmountFeni">5500</span> BDT</p>
+        <div id="mainDiv" class="w-full flex flex-col justify-center gap-10">
+            <div class="flex flex-col md:flex-row w-[90%] mx-auto gap-5">
+                <div class="md:w-1/2">
+                    <img src="./assets/noakhali.png" alt="feni">
                 </div>
-                <p class="font-bold">Donate for Flood at Noakhali, Bangladesh</p>
-                <p class="md:leading-8"> The recent floods in Noakhali have caused significant damage to homes
-                    infrastructure. Your donation
-                    will help provide essential supplies and to those affected by this disaster. Every contribution, big
-                    or small, makes difference. Please join us in supporting the relief efforts and making a positive
-                    impact on the lives of those in need.</p>
-                <input id="donateInputFeni" class="px-3 py-4 border-2 border-black rounded-md outline-none" type="text">
-                <button id="donateBtn" class="btn btn-primary">Donate Now</button>
-            </div>
-        </div>
-        <div class="flex flex-col md:flex-row w-[90%] mx-auto gap-5">
-            <div class="md:w-1/2">
-                <img src="./assets/feni.png" alt="feni">
-            </div>
-            <div class="md:w-1/2 flex flex-col justify-between gap-3">
-                <div class="w-32 flex items-center gap-2 bg-slate-200 px-3 py-2 rounded-md">
-                    <img width="20" height="20" src="./assets/coin.png" alt="coin">
-                    <p><span id="netDonateAmountNk">7500</span> BDT</p>
+                <div class="md:w-1/2 flex flex-col justify-between gap-3">
+                    <div class="w-32 flex items-center gap-2 bg-slate-200 px-3 py-2 rounded-md">
+                        <img width="20" height="20" src="./assets/coin.png" alt="coin">
+                        <p><span id="netDonateAmountFeni">5500</span> BDT</p>
+                    </div>
+                    <p class="font-bold">Donate for Flood at Noakhali, Bangladesh</p>
+                    <p class="md:leading-8"> The recent floods in Noakhali have caused significant damage to homes
+                        infrastructure. Your donation
+                        will help provide essential supplies and to those affected by this disaster. Every contribution,
+                        big
+                        or small, makes difference. Please join us in supporting the relief efforts and making a
+                        positive
+                        impact on the lives of those in need.</p>
+                    <input id="donateInputFeni" class="px-3 py-4 border-2 border-black rounded-md outline-none"
+                        type="text">
+                    <button id="donateBtn" class="btn btn-primary">Donate Now</button>
                 </div>
-                <p class="font-bold">Donate for Flood Relief in Feni,Bangladesh</p>
-                <p class="md:leading-8"> The recent floods in Feni have devastated local communities, leading to severe
-                    disruption and loss. Your generous donation will help provide immediate aid, including food, clean
-                    water, and medical supplies, to those affected by this calamity. Together, we can offer crucial
-                    support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards
-                    making a real difference. Please consider donating today to assist those in urgent need.</p>
-                <input id="donateInputNk" class="px-3 py-4 border-2 border-black rounded-md outline-none" type="text">
-                <button id="donateBtn" class="btn btn-primary">Donate Now</button>
             </div>
-        </div>
-        <div class="flex flex-col md:flex-row w-[90%] mx-auto gap-5">
-            <div class="md:w-1/2">
-                <img src="./assets/quota-protest.png" alt="feni">
-            </div>
-            <div class="md:w-1/2 flex flex-col justify-between gap-3">
-                <div class="w-32 flex items-center gap-2 bg-slate-200 px-3 py-2 rounded-md">
-                    <img width="20" height="20" src="./assets/coin.png" alt="coin">
-                    <p><span id="netDonateAmountQout">6500</span> BDT</p>
+            <div class="flex flex-col md:flex-row w-[90%] mx-auto gap-5">
+                <div class="md:w-1/2">
+                    <img src="./assets/feni.png" alt="feni">
                 </div>
-                <p class="font-bold">Aid for Injured in the Quota Movement</p>
-                <p class="md:leading-8"> The recent Quota movement has resulted in numerous injuries and significant
-                    hardship for many individuals. Your support is crucial in providing medical assistance,
-                    rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that
-                    injured individuals receive the care and support they need during this challenging time. Every
-                    donation plays a vital role in alleviating their suffering and aiding in their recovery. Please
-                    consider making a donation to support these brave individuals in their time of need.</p>
-                <input id="donateInputQout" class="px-3 py-4 border-2 border-black rounded-md outline-none" type="text">
-                <button id="donateBtn" class="btn btn-primary">Donate Now</button>
+                <div class="md:w-1/2 flex flex-col justify-between gap-3">
+                    <div class="w-32 flex items-center gap-2 bg-slate-200 px-3 py-2 rounded-md">
+                        <img width="20" height="20" src="./assets/coin.png" alt="coin">
+                        <p><span id="netDonateAmountNk">7500</span> BDT</p>
+                    </div>
+                    <p class="font-bold">Donate for Flood Relief in Feni,Bangladesh</p>
+                    <p class="md:leading-8"> The recent floods in Feni have devastated local communities, leading to
+                        severe
+                        disruption and loss. Your generous donation will help provide immediate aid, including food,
+                        clean
+                        water, and medical supplies, to those affected by this calamity. Together, we can offer crucial
+                        support and help rebuild lives in the aftermath of this disaster. Every contribution counts
+                        towards
+                        making a real difference. Please consider donating today to assist those in urgent need.</p>
+                    <input id="donateInputNk" class="px-3 py-4 border-2 border-black rounded-md outline-none"
+                        type="text">
+                    <button id="donateBtn" class="btn btn-primary">Donate Now</button>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row w-[90%] mx-auto gap-5">
+                <div class="md:w-1/2">
+                    <img src="./assets/quota-protest.png" alt="feni">
+                </div>
+                <div class="md:w-1/2 flex flex-col justify-between gap-3">
+                    <div class="w-32 flex items-center gap-2 bg-slate-200 px-3 py-2 rounded-md">
+                        <img width="20" height="20" src="./assets/coin.png" alt="coin">
+                        <p><span id="netDonateAmountQout">6500</span> BDT</p>
+                    </div>
+                    <p class="font-bold">Aid for Injured in the Quota Movement</p>
+                    <p class="md:leading-8"> The recent Quota movement has resulted in numerous injuries and significant
+                        hardship for many individuals. Your support is crucial in providing medical assistance,
+                        rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that
+                        injured individuals receive the care and support they need during this challenging time. Every
+                        donation plays a vital role in alleviating their suffering and aiding in their recovery. Please
+                        consider making a donation to support these brave individuals in their time of need.</p>
+                    <input id="donateInputQout" class="px-3 py-4 border-2 border-black rounded-md outline-none"
+                        type="text">
+                    <button id="donateBtn" class="btn btn-primary">Donate Now</button>
+                </div>
             </div>
         </div>
 
+        <!-- modal for successful donation -->
+
+
+
         <!-- history section -->
-        <div class="w-full h-[100vh] hidden">
+        <div id="historyDiv" class="w-full hidden">
             <div class="flex flex-col w-[90%] mx-auto gap-5 border-2 px-7 py-6">
                 <p>96500 Taka is Donated for famine-2024 at Feni, Bangladesh</p>
                 <p>Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
