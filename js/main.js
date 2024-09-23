@@ -1,27 +1,30 @@
 const donateBtn = document.querySelectorAll("#donateBtn");
 const mainDiv = document.getElementById("mainDiv");
 const historyDiv = document.getElementById("historyDiv");
+const history = document.getElementById("history");
+const donate = document.getElementById("donate");
 
 // function for navigate between history and donate 
 
 const handleDonateBtn = function() {
     let isDonateContainHidden = mainDiv.classList.contains("hidden");
+    let isDonateContainBg = mainDiv.classList.contains("bg-[#00D7C0]");
 
-    if (isDonateContainHidden) {
-        
+    if (isDonateContainHidden && !isDonateContainBg) {
+        donate.classList.add("bg-[#00D7C0]");
+        history.classList.remove("bg-[#00D7C0]");
         mainDiv.classList.remove("hidden");
         historyDiv.classList.add("hidden");
     }
 }
 
-// document.getElementById("historyid").addEventListener("click", () => {
-//     mainDiv.classList.add("hidden");
-// })
 const handleHistoryBtn = function() {
     let isHistoryContainHidden = mainDiv.classList.contains("hidden");
+    let isHistoryContainBg = mainDiv.classList.contains("bg-[#00D7C0]");
     console.log("working")
-    if(!isHistoryContainHidden) {
-
+    if(!isHistoryContainHidden && !isHistoryContainBg) {
+        donate.classList.remove("bg-[#00D7C0]");
+        history.classList.add("bg-[#00D7C0]");
         historyDiv.classList.remove("hidden");
         mainDiv.classList.add("hidden");
     }
