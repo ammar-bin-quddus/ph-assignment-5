@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,28 +26,48 @@
     </script>
 </head>
 
-<body class="w-full h-[100vh] flex flex-col justify-center">
-    <div class="collapse collapse-arrow bg-base-200">
-        <input type="radio" name="my-accordion-2" checked="checked" />
-        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-        <div class="collapse-content">
-            <p>hello</p>
+<body class="w-full h-full">
+    <header class="sticky top-0 w-full h-[35%] bg-[#F9F7F3]">
+        <nav class="w-[90%] h-full mx-auto flex items-center justify-between py-5">
+            <button onclick="toHome()" class="btn btn-accent">Home</button>
+            <div class="flex items-center gap-2">
+                <p class="text-2xl">Important FAQ</p>
+                <i class="fa-solid fa-circle-question text-2xl"></i>
+            </div>
+        </nav>
+    </header>
+    <div class="w-[90%] min-h-screen mx-auto flex flex-col justify-center">
+        <div class="collapse collapse-arrow bg-base-200 mt-2">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is the document object model (DOM)?</div>
+            <div class="collapse-content">
+                <p>hello</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mt-2">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+                <p>hello</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mt-2">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-content">
+                <p>hello</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200 mt-2">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+                <p>hello</p>
+            </div>
         </div>
     </div>
-    <div class="collapse collapse-arrow bg-base-200">
-        <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-        <div class="collapse-content">
-            <p>hello</p>
-        </div>
-    </div>
-    <div class="collapse collapse-arrow bg-base-200">
-        <input type="radio" name="my-accordion-2" />
-        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-        <div class="collapse-content">
-            <p>hello</p>
-        </div>
-    </div>
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
