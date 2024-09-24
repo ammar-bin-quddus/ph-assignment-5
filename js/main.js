@@ -3,6 +3,7 @@ const mainDiv = document.getElementById("mainDiv");
 const historyDiv = document.getElementById("historyDiv");
 const history = document.getElementById("history");
 const donate = document.getElementById("donate");
+const modalDiv = document.getElementById("modalDiv");
 
 // function for navigate between history and donate 
 
@@ -48,12 +49,20 @@ const calculateDonation = function(idDiv, idInput) {
     let inputValue = parseFloat(getInputId(idInput));
     let sum = targetDivValue + inputValue;
 
-    if (isNaN(inputValue)) {
+    if (isNaN(inputValue) || inputValue < 0) {
         alert("invalid donation amount")
+    }else if(inputValue > donationBalance) {
+        alert("insufficient amount")
     } else {
         document.getElementById(idDiv).innerText = sum;
         document.getElementById("donationBalance").innerText = donationBalance - inputValue;
+        modalDiv.classList.remove("hidden");
     }
+}
+
+
+const hideModal = function() {
+    modalDiv.classList.add("hidden");
 }
 
 // using forEach method 
