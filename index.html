@@ -25,14 +25,14 @@
 </head>
 
 <body class="font-lexend">
-    <header class="w-full sticky z-10 top-0">
-        <nav class="w-full bg-[#F9F7F3]">
+    <header class="w-full sticky z-10 top-0 backdrop-blur-[8px]">
+        <nav class="w-full bg-[#f9f7f39a]">
             <div
                 class="w-[90%] mx-auto flex flex-wrap max-md:justify-center md:flex-row justify-between items-center max-sm:gap-5 gap-3 py-8 md:py-5">
                 <div><button id="blogBtn" onclick="myBlog()" class="btn btn-accent">Blog</button></div>
                 <div class="flex items-center gap-2">
                     <img width="20" height="20" src="./assets/logo.png" alt="logo">
-                    <p>Donate Bangladesh</p>
+                    <p class="text-xl font-bold">Donate Bangladesh</p>
                 </div>
                 <div class="flex items-center gap-2 bg-slate-200 px-3 py-2 rounded-md">
                     <img width="20" height="20" src="./assets/coin.png" alt="">
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </nav>
-        <div class="w-full backdrop-blur-[8px] flex justify-center gap-10 h-[100px] items-center">
+        <div class="w-full flex justify-center gap-10 h-[100px] items-center">
             <button onclick="handleDonateBtn()" id="donate"
                 class="border-2 px-6 py-2 rounded-md bg-[#00D7C0]">Donate</button>
             <button onclick="handleHistoryBtn()" id="history" class="border-2 px-6 py-2 rounded-md">History</button>

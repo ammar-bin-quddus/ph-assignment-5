@@ -120,7 +120,7 @@ for (let elem of donateBtn) {
         // get timezoneOffset 
 
         const timezoneOffset = currentDate.getTimezoneOffset();
-        console.log(timezoneOffset)
+        //console.log(timezoneOffset)
 
         // format the timezone offset
 
@@ -143,8 +143,9 @@ for (let elem of donateBtn) {
 
         let valueOfInput = Number(getInputId(inputFieldId));
         const historyDiv = document.getElementById("historyDiv");
+        let donationBalance = parseFloat(document.getElementById("donationBalance").innerText);
 
-        if (!isNaN(valueOfInput) && valueOfInput > 0) {
+        if (!isNaN(valueOfInput) && valueOfInput > 0 && valueOfInput < donationBalance) {
             historyDiv.innerHTML += `<div class="flex flex-col w-[90%] mx-auto gap-5 border-2 px-7 py-6 mb-5">
                                     <p>${valueOfInput} Taka is Donated for ${donateLocation}</p>
                                     <p>Date : ${currentDateTimeString}</p>
