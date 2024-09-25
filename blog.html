@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -26,8 +26,8 @@
     </script>
 </head>
 
-<body class="w-full h-full">
-    <header class="sticky top-0 w-full h-[35%] bg-[#F9F7F3]">
+<body class="w-full h-full font-lexend">
+    <header class="sticky top-0 z-10 w-full h-[35%] bg-[#F9F7F3]">
         <nav class="w-[90%] h-full mx-auto flex items-center justify-between py-5">
             <button onclick="toHome()" class="btn btn-accent">Home</button>
             <div class="flex items-center gap-2">
@@ -39,30 +39,42 @@
     <div class="w-[90%] min-h-screen mx-auto flex flex-col justify-center">
         <div class="collapse collapse-arrow bg-base-200 mt-2">
             <input type="radio" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title text-xl font-medium">What is the document object model (DOM)?</div>
+            <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
             <div class="collapse-content">
-                <p>hello</p>
+                <p class="font-light">The Document Object Model represents the structure of an HTML document as a tree of object. It is the
+                    programming interface of a web documents.There are many nodes like elements, attribute, text etc. We
+                    can easily interact dynamically and make changes in the websites.</p>
             </div>
         </div>
         <div class="collapse collapse-arrow bg-base-200 mt-2">
             <input type="radio" name="my-accordion-2" />
             <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
             <div class="collapse-content">
-                <p>hello</p>
+                <p class="font-light">We can easily select an element from the DOM. At first we have to give an id to that particular
+                    element. Then in our js file we have to create a variable to store the selected element. Then we
+                    have to write document.getElementById("id"). So the element will store in the variable. We can also
+                    use querySelector(). In this case we have to add the css selector sign before the id or class. And
+                    there are also many way to select an element.</p>
             </div>
         </div>
         <div class="collapse collapse-arrow bg-base-200 mt-2">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why
+                is it useful?</div>
             <div class="collapse-content">
-                <p>hello</p>
+                <p class="font-light">Event delegation is a technique where a event listener is attached to a parent element. So that it
+                    will handle events triggered by its child element. It manage the child element using event bubbling.
+                </p>
             </div>
         </div>
         <div class="collapse collapse-arrow bg-base-200 mt-2">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
+                using the DOM?</div>
             <div class="collapse-content">
-                <p>hello</p>
+                <p class="font-light">We can manipulate an element's attributes using setAttribute() and getAttribute() methods. For
+                    styling we have to use style property. Example: element.style.backgroundColor = "red". It will set
+                    the background color to red.</p>
             </div>
         </div>
     </div>

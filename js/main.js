@@ -79,25 +79,8 @@ const hideModal = function () {
     modalDiv.classList.add("hidden");
 }
 
-// using forEach method 
 
-
-// donateBtn.forEach((elem) => {
-//     elem.addEventListener("click", (det) => {
-//         //console.log(det.target.parentNode.firstElementChild.children[1].children[0].id)
-
-//         // get donate span id from target div
-//         let showDonateSpanId = det.target.parentNode.firstElementChild.children[1].children[0].id;
-//         // get input id from target input field
-//         let inputFieldId = det.target.previousElementSibling.id;
-//         //console.log(inputFieldId)
-
-//         calculateDonation(showDonateSpanId, inputFieldId);
-//     })
-// })
-
-
-// using for of method
+// donation functionalities 
 
 for (let elem of donateBtn) {
     elem.addEventListener("click", function (det) {
@@ -156,9 +139,12 @@ for (let elem of donateBtn) {
 
         let valueOfInput = Number(getInputId(inputFieldId));
         const historyDiv = document.getElementById("historyDiv");
-        historyDiv.innerHTML += `<div class="flex flex-col w-[90%] mx-auto gap-5 border-2 px-7 py-6 mb-5">
+        
+        if(!isNaN(valueOfInput) && valueOfInput > 0) {
+            historyDiv.innerHTML += `<div class="flex flex-col w-[90%] mx-auto gap-5 border-2 px-7 py-6 mb-5">
                                     <p>${valueOfInput} Taka is Donated for ${donateLocation}</p>
                                     <p>Date : ${currentDateTimeString}</p>
-                                </div>`
+                                </div>`;
+        }
     })
 }
