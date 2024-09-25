@@ -63,9 +63,9 @@ const calculateDonation = function (idDiv, idInput) {
     let sum = targetDivValue + inputValue;
 
     if (isNaN(inputValue) || inputValue <= 0) {
-        alert("invalid donation amount")
+        alert("invalid donation amount");
     } else if (inputValue > donationBalance) {
-        alert("insufficient amount")
+        alert("insufficient amount");
     } else {
         document.getElementById(idDiv).innerText = sum;
         document.getElementById("donationBalance").innerText = donationBalance - inputValue;
@@ -93,9 +93,7 @@ for (let elem of donateBtn) {
         let inputFieldId = det.target.previousElementSibling.id;
         //console.log(inputFieldId)
 
-        calculateDonation(showDonateSpanId, inputFieldId);
-
-
+        
         // get current date and time
 
         const currentDate = new Date();
@@ -143,9 +141,10 @@ for (let elem of donateBtn) {
 
         let valueOfInput = Number(getInputId(inputFieldId));
         const historyDiv = document.getElementById("historyDiv");
-        let donationBalance = parseFloat(document.getElementById("donationBalance").innerText);
+        let donationBalance = Number(document.getElementById("donationBalance").innerText);
+        calculateDonation(showDonateSpanId, inputFieldId);
 
-        if (!isNaN(valueOfInput) && valueOfInput > 0 && valueOfInput < donationBalance) {
+        if (!isNaN(valueOfInput) && valueOfInput > 0 && valueOfInput <= donationBalance) {
             historyDiv.innerHTML += `<div class="flex flex-col w-[90%] mx-auto gap-5 border-2 px-7 py-6 mb-5">
                                     <p>${valueOfInput} Taka is Donated for ${donateLocation}</p>
                                     <p>Date : ${currentDateTimeString}</p>
