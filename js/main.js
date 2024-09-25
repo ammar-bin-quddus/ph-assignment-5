@@ -120,9 +120,13 @@ for (let elem of donateBtn) {
         // get timezoneOffset 
 
         const timezoneOffset = currentDate.getTimezoneOffset();
-        //console.log(timezoneOffset)
+        console.log(timezoneOffset)
 
         // format the timezone offset
+
+        /* our local timezone is ahead of UTC thats why timezoneOffset 
+           will give the output -360. That means it is 6 hours ahead. 
+           For get the value in hour and positive value we have to divided it by -60; */
 
         const formatTimezoneOffset = (timezoneOffset / -60).toString().padStart(2, "0") + "00";
         //console.log(formatTimezoneOffset)
@@ -139,8 +143,8 @@ for (let elem of donateBtn) {
 
         let valueOfInput = Number(getInputId(inputFieldId));
         const historyDiv = document.getElementById("historyDiv");
-        
-        if(!isNaN(valueOfInput) && valueOfInput > 0) {
+
+        if (!isNaN(valueOfInput) && valueOfInput > 0) {
             historyDiv.innerHTML += `<div class="flex flex-col w-[90%] mx-auto gap-5 border-2 px-7 py-6 mb-5">
                                     <p>${valueOfInput} Taka is Donated for ${donateLocation}</p>
                                     <p>Date : ${currentDateTimeString}</p>
